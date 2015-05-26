@@ -49,12 +49,12 @@ var app = {
     var isAndroid = (/(android)/i.test(navigator.userAgent));
     var adPublisherIds = {
       ios : {
-        banner: 'ca-app-pub-9863325511078756/5232547029',
-        interstitial: 'ca-app-pub-9863325511078756/6709280228'
+        banner: 'ca-app-pub-9114339752225416/7304638684',
+        interstitial: 'ca-app-pub-9114339752225416/3546823081'
       },
       android : {
-        banner: 'ca-app-pub-9863325511078756/9802347428',
-        interstitial: 'ca-app-pub-9863325511078756/2279080628'
+        banner: 'ca-app-pub-9114339752225416/7304638684',
+        interstitial: 'ca-app-pub-9114339752225416/3546823081'
       }
     };
 
@@ -68,7 +68,7 @@ var app = {
     admob.setOptions({
       publisherId: admobid.banner,
       interstitialAdId: admobid.interstitial,
-      bannerAtTop: true, // set to true, to put banner at top
+      bannerAtBottom: true, // set to true, to put banner at top
       overlap: false, // set to true, to allow banner overlap webview
       offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
       isTesting: true, // receiving test ads (do not test with real ads as your account will be banned)
@@ -146,7 +146,7 @@ var app = {
   // App buttons functionality
   // -----------------------------------
   startBannerAds: function () {
-    app.showProgress(true);
+    //app.showProgress(true);
     admob.createBannerView(function (){}, function (e) {
       alert(JSON.stringify(e));
     });
